@@ -1,0 +1,40 @@
+
+.timing {
+    margin: 70px 0;
+}
+.timing__items {
+    display: flex;
+}
+.timing__item {
+    display: flex;
+    border-radius: 20rem;
+    margin: 0 10rem;
+    padding: 50rem;
+    width: 50%;
+    overflow: hidden;
+    box-shadow: 0 10rem 60rem 20rem rgba(var(--c-black),0.1);
+    background: rgb(var(--c-white)) url('../img/timing_bg.svg') no-repeat -20rem top;
+    background-size: auto 100%;
+
+}
+.timing__item__left {
+    margin-right: 70rem;
+    
+}
+.timing__item__right {
+    margin-left: 20rem;
+    font-weight: 500;
+}
+.timing__title {
+    font-size: 15px;
+    font-weight: 500;
+}
+.timing__time {
+    display: flex;
+    left: -10rem;
+    align-items: center;
+}
+.timing__time__text {
+    font-size: 40rem;
+    margin-left: 10rem;
+}

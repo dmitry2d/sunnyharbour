@@ -5,6 +5,7 @@
     --c-black: 60,73,80;
     --c-light: 238,241,243;
     --c-blue: 27,150,210;
+    --c-green: 88,195,70;
     --c-orange: 245,156,55;
     --container-width: 1400px;
 }
@@ -21,6 +22,9 @@
 .c-blue {
     color: rgb(var(--c-blue));
 }
+.c-green {
+    color: rgb(var(--c-green));
+}
 .c-orange {
     color: rgb(var(--c-orange));
 }
@@ -36,6 +40,9 @@
 }
 .bg-blue {
     background-color: rgb(var(--c-blue));
+}
+.bg-green {
+    background-color: rgb(var(--c-green));
 }
 .bg-orange {
     background-color: rgb(var(--c-orange));

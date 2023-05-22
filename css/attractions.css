@@ -1,0 +1,93 @@
+
+.attractions {
+    
+}
+
+.attractions__map {
+    margin: 50rem 0;
+}
+.attractions__map__yandex {
+    display: block;
+    width: 100%;
+    height: 440rem;
+}
+.attractions__map__legend {
+    position: absolute;
+    width: 100%;
+    top: -30rem;
+    bottom: -30rem;
+    pointer-events: none;
+}
+.attractions__map__legend__wrapper {
+    width: fit-content;
+    background: rgb(var(--c-white));
+    box-shadow: 0 0 60rem 20rem rgba(var(--c-black), 0.2);
+    padding: 40rem;
+    border-radius: 10rem;
+    pointer-events: all;
+    min-width: 400rem;
+    min-height: 400rem;
+}
+.attractions__map__zoom {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    border: 2px dotted rgba(var(--c-black), 0.5);
+    border-radius: 30rem;
+    padding: 10rem;
+    margin: 20rem -10rem;
+}
+.attractions__map__zoom__in,
+.attractions__map__zoom__out {
+    font-size: 0;
+    cursor: pointer;
+}
+.attractions__map__zoom__scale {
+    flex-grow: 1;
+    margin: 0 20rem;
+}
+.attractions__map__zoom__scale__off {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../img/map_zoom_bg_off.svg') repeat-x left center;
+    width: 100%;
+    height: 100%;
+}
+.attractions__map__zoom__scale__on {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url('../img/map_zoom_bg_on.svg') repeat-x left center;
+    width: 0%;
+    height: 100%;
+}
+
+.attractions__map__kilometers__title {
+    font-size: 18rem;
+    font-weight: 500;
+}
+.attractions__map__kilometers__count {
+    font-size: 34rem;
+    font-weight: 500;
+}
+
+.attractions__map__legend__items {
+    z-index: 1;
+}
+.attractions__map__legend__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10rem;
+}
+.attractions__map__legend__item > div {
+    margin-left: 10rem;
+}
+
+.attractions__map__legend__bg {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    pointer-events: none;
+    z-index: 0;
+}

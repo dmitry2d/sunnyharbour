@@ -5,7 +5,7 @@
 }
 .special-offer__items {
     display: flex;
-    margin: 40rem -10rem;
+    margin: 30rem -10rem;
 }
 .special-offer__item {
     border-radius: 20rem;

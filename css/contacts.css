@@ -1,0 +1,39 @@
+
+
+.contacts {
+    margin-top: 50rem;
+    margin-bottom: 50rem;
+}
+.contacts__grid {
+    display: flex;
+}
+.contacts__grid__left {
+    flex-grow: 1;
+    padding-left: 30rem;
+}
+.contacts__badges a {
+    display: block;
+}
+.contacts__items {
+    padding: 40rem 0;
+}
+.contacts__item {
+    display: flex;
+    align-items: center;
+    margin: 10rem 0 0;
+
+}
+.contacts__item__text {
+    display: flex;
+    align-items: center;
+    font-size: 28rem;
+    font-weight: 500;
+    margin-left: 25rem;
+}
+.contacts__item__text a {
+    margin-right: 15rem;
+    font-size: 17rem;
+    font-weight: 500;
+    text-decoration: underline;
+    text-decoration-style: dotted;
+}

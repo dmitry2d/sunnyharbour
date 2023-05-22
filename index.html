@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,6 +24,10 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
     <script src="vendor/slick/slick.min.js"></script>
     <!-- /Слайдер -->
+
+    <!-- Карты Яндекс API -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ffe877fc-cc0d-456b-a9b3-75ade87dc888&lang=ru_RU"></script>
+    <!-- / Карты Яндекс API -->
 
 </head>
 <body>
@@ -139,7 +143,7 @@
     </div>
   </div>
 
-  <!-- Бронирование -->
+  <!-- Бронирование в баннере -->
     <div class="booking banner">
       <form action="">
         <div class="booking__input">
@@ -193,9 +197,24 @@
         </div>
       </form>
     </div>
-  <!-- / Бронирование -->
+  <!-- / Бронирование в баннере -->
 </div>
 <!-- / Верхний баннер -->
+<!-- Верхний баннер скрипты -->
+<script>
+  $(document).ready(function(){
+    // Слайдер на баннере
+    $('.banner__items').slick({
+      dots: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      speed: 1000
+    });
+  });
+</script>
+<!-- / Верхний баннер скрипты -->
+
+
 
 <!-- Специальное предложение -->
 <div class="special-offer container">
@@ -270,7 +289,7 @@
  <!-- Бронирование -->
  <div class="booking horizontal container">
     <div class="h1 c-black">
-      Специальные предложения
+      Бронирование
     </div>
     <div class="divider bg-blue"></div>
     <form action="">
@@ -421,64 +440,256 @@
   </div>
 </div>
 <!-- Слайдер категорий -->
-
-<!-- Достопримечательности -->
-<div class="attractions"></div>
-<!-- Достопримечательности -->
-
-<!-- Видео-обзор -->
-<div class="video-review"></div>
-<!-- / Видео-обзор -->
-
-<!-- Преимущества -->
-<div class="advantages"></div>
-<!-- / Преимущества -->
-
-<!-- Нижнее доплнительное меню -->
-<div class="add-menu"></div>
-<!-- / Нижнее доплнительное меню -->
-
-<!-- Нижнее меню, лого, контакты -->
-<div class="menu"></div>
-<!-- Нижнее меню, лого, контакты -->
-
-<!-- Скрипты для главной -->
+<!-- Слайдер категорий скрипты-->
 <script>
       $(document).ready(function(){
-
-        // Слайдер фото на баннере
-        $('.banner__items').slick({
-          dots: true,
-          autoplay: true,
-          autoplaySpeed: 3000,
-          speed: 1000
-        });
-        
-        
-        // Слайдер категорий
+        // Слайдер
         $('.category-slider__items').slick({
           slidesToShow: 3,
           slidesToScroll: 3,
           autoplay: true,
           autoplaySpeed: 3000,
           dots: true,
+          prevArrow: false,
+          nextArrow: false,
           appendDots: $('.category-slider__controls__dots')
         });
+        // Листание левая кнопка
         $('.category-slider__controls__left').on('click', e => {
           $('.category-slider__items').slick('slickPrev');
         });
+        // Листание правая кнопка
         $('.category-slider__controls__right').on('click', e => {
           $('.category-slider__items').slick('slickNext');
         });
-
-
       });
-
 </script>
-<!-- /Скрипты для главной -->
+<!-- / Слайдер категорий скрипты -->
 
+<!-- Достопримечательности -->
+<div class="attractions">
+    <div class="h1 c-black">
+      Достопримечательности
+      <span>В шаговой доступности от отеля</span>
+    </div>
+    <div class="divider bg-blue"></div>
+    <div class="attractions__map">
+      <div class="attractions__map__yandex" id="attractions__map__container">
+        <!-- YMaps Container -->
+      </div>
+      <div class="attractions__map__legend">
+        <div class="container">
+          <div class="attractions__map__legend__wrapper">
+            <div class="attractions__map__kilometers">
+              <div class="attractions__map__kilometers__title">
+                Удаленность:
+              </div>
+              <div class="attractions__map__kilometers__count c-blue">
+              </div>
+            </div>
+            <div class="attractions__map__zoom">
+              <div class="attractions__map__zoom__out">
+                <img src="./img/map_zoom_out.svg">
+              </div>
+              <div class="attractions__map__zoom__scale">
+                <div class="attractions__map__zoom__scale__on"></div>
+                <div class="attractions__map__zoom__scale__off"></div>
+              </div>
+              <div class="attractions__map__zoom__in">
+                <img src="./img/map_zoom_in.svg">
+              </div>
+            </div>
+            <div class="attractions__map__legend__items">
+              <div class="attractions__map__legend__item">
+                <img src="./img/icons/percent_red.svg">
+                <div>Рестораны</div>
+              </div>
+              <div class="attractions__map__legend__item">
+                <img src="./img/icons/percent_red.svg">
+                <div>Рестораны</div>
+              </div>
+              <div class="attractions__map__legend__item">
+                <img src="./img/icons/percent_red.svg">
+                <div>Рестораны</div>
+              </div>
+              <div class="attractions__map__legend__item">
+                <img src="./img/icons/percent_red.svg">
+                <div>Рестораны</div>
+              </div>
+              <div class="attractions__map__legend__item">
+                <img src="./img/icons/percent_red.svg">
+                <div>Рестораны</div>
+              </div>
+            </div>
+            <div class="attractions__map__legend__bg">
+              <img src="./img/palms.svg">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+<!-- Достопримечательности -->
+<!-- Скрипты достопримечательностей -->
+<script src="./js/attraction_map.js"></script>
+<!-- / Скрипты достопримечательностей -->
+
+<!-- Видео-обзор -->
+<div class="video-review">
+  <div class="h1 c-black">
+    Видео обзор
+  </div>
+  <div class="divider bg-orange">
+  </div>
+  <div class="video-review__bg">
+    <img src="./img/logo_shine_black.svg">
+  </div>
+  <div class="video-review__video">
+    <iframe width="550" height="280" src="https://www.youtube.com/embed/2Oh2yxIa60I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+  </div>
+</div>
+<!-- / Видео-обзор -->
+
+<!-- Преимущества -->
+<div class="advantages container">
+  <div class="h1 c-black">
+    Наши преимущества
+  </div>
+  <div class="divider bg-blue"></div>
+  <div class="advantages__items">
+    <div class="advantages__item">
+      <div class="advantages__item__title">
+        Преимущество 1
+      </div>
+      <div class="advantages__item__photo">
+        <img src="./img/photo1.jpg">
+      </div>
+      <div class="advantages__item__description c-blue">
+        Расшифровка преимущества, небольшой абзац
+      </div>
+    </div>
+    <div class="advantages__item">
+      <div class="advantages__item__title">
+        Преимущество 1
+      </div>
+      <div class="advantages__item__photo">
+        <img src="./img/photo1.jpg">
+      </div>
+      <div class="advantages__item__description c-blue">
+        Расшифровка преимущества, небольшой абзац
+      </div>
+    </div>
+    <div class="advantages__item">
+      <div class="advantages__item__title">
+        Преимущество 1
+      </div>
+      <div class="advantages__item__photo">
+        <img src="./img/photo1.jpg">
+      </div>
+      <div class="advantages__item__description c-blue">
+        Расшифровка преимущества, небольшой абзац
+      </div>
+    </div>
+    <div class="advantages__item">
+      <div class="advantages__item__title">
+        Преимущество 1
+      </div>
+      <div class="advantages__item__photo">
+        <img src="./img/photo1.jpg">
+      </div>
+      <div class="advantages__item__description c-blue">
+        Расшифровка преимущества, небольшой абзац
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Преимущества -->
+
+<!-- Нижнее доплнительное меню -->
+<div class="add-menu in-footer">
+  <div class="container bg-blue">
+    <div class="add-menu__left">
+      <div class="add-menu__menu">
+        <a href="" class="add-menu__menu__item">
+          <img src="./img/icons/home_top_add_menu.svg">
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          О нас
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Беседки
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Спа
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Контакты
+        </a>
+      </div>
+    </div>
+    <div class="add-menu__right">
+      <div class="add-menu__right__locale">
+        <a href="" class="add-menu__right__locale__item"><img src="./img/icons/flag_en.png"></a>
+        <a href="" class="add-menu__right__locale__item selected"><img src="./img/icons/flag_ru.png"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Нижнее доплнительное меню -->
+
+<!-- Нижнее меню, лого, контакты -->
+<div class="menu container in-footer">
+  <div class="menu__left">
+    <div class="menu__menu">
+      <a href="" class="menu__menu__item c-black bg-light">
+        Номера
+      </a>
+      <a href="" class="menu__menu__item c-black bg-light">
+        Галерея
+      </a>
+      <a href="" class="menu__menu__item c-black bg-light">
+        Отзывы
+      </a>
+      <a href="" class="menu__menu__item c-black special">
+        Спецпредложения
+      </a>
+    </div>
+  </div>
+  <div class="menu__center">
+    <div class="menu__center__logo-shine">
+      <img src="./img/logo_shine.svg">
+    </div>
+    <div class="menu__center__logo">
+      <img src="./img/logo.svg">
+    </div>
+  </div>
+  <div class="menu__right">
+    <div class="menu__social">
+      <a href="" class="menu__social__item">
+        <img src="./img/icons/vk.svg">
+      </a>
+      <a href="" class="menu__social__item">
+        <img src="./img/icons/wa.svg">
+      </a>
+    </div>
+    <div class="menu__phone">
+      <img src="./img/icons/sun_phone.svg">
+      <a href="" class="c-black">8 8617 22 22 77</a>
+    </div>
+  </div>
+  <div class="menu__address">
+    г. Новороссийск, ул. Рыбацкая, 7
+  </div>
+</div>
+<!-- Нижнее меню, лого, контакты -->
 
 <!-- Футер -->
+<div class="footer">
+  <div class="footer__bg">
+    <img src="./img/footer_bg.png">
+  </div>
+</div>
+
 </body>
 </html>
 <!-- / Футер -->

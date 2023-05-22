@@ -1,0 +1,21 @@
+
+
+.video-review {
+    margin-top: 70rem;
+
+}
+.video-review__bg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%,-20%);
+    z-index: -1;
+    pointer-events: none;
+}
+.video-review__video {
+    text-align: center;
+    margin-top: 30rem;
+}
+.video-review__video iframe {
+    border-radius: 10rem;
+}

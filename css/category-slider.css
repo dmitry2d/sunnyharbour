@@ -2,11 +2,12 @@
 
 .category-slider {
     overflow-x:hidden;
+    margin-top: 40rem;
 }
 .category-slider__items {
     display: flex;
-    margin: 0 -15rem;
-    padding: 50rem 0;
+    margin: 20rem -15rem 0;
+    padding: 10rem 0;
     background: rgb(var(--c-white));
 }
 .category-slider__item {

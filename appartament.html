@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Солнечная гавань</title>
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- /Стили -->
+
+    <!-- Шрифты гугл -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- /Шрифты гугл -->
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- /jQuery -->
+    
+    <!-- Слайдер -->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
+    <script src="vendor/slick/slick.min.js"></script>
+    <!-- /Слайдер -->
+
+    <!-- Карты Яндекс API -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ffe877fc-cc0d-456b-a9b3-75ade87dc888&lang=ru_RU"></script>
+    <!-- / Карты Яндекс API -->
+
+</head>
+<body class="inside">
+  
+<!-- Верхнее доплнительное меню -->
+<div class="add-menu">
+  <div class="container bg-blue">
+    <div class="add-menu__left">
+      <div class="add-menu__menu">
+        <a href="" class="add-menu__menu__item">
+          <img src="./img/icons/home_top_add_menu.svg">
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          О нас
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Беседки
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Спа
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Контакты
+        </a>
+      </div>
+    </div>
+    <div class="add-menu__right">
+      <div class="add-menu__right__locale">
+        <a href="" class="add-menu__right__locale__item"><img src="./img/icons/flag_en.png"></a>
+        <a href="" class="add-menu__right__locale__item selected"><img src="./img/icons/flag_ru.png"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Верхнее доплнительное меню -->
+
+<!-- Верхнее меню, лого, контакты -->
+<div class="menu container">
+  <div class="menu__left">
+    <div class="menu__menu">
+      <a href="" class="menu__menu__item c-black bg-light">
+        Номера
+      </a>
+      <a href="" class="menu__menu__item c-black bg-light">
+        Галерея
+      </a>
+      <a href="" class="menu__menu__item c-black bg-light">
+        Отзывы
+      </a>
+      <a href="" class="menu__menu__item c-black special">
+        Спецпредложения
+      </a>
+    </div>
+  </div>
+  <div class="menu__center">
+    <div class="menu__center__logo-shine">
+      <img src="./img/logo_shine.svg">
+    </div>
+    <div class="menu__center__logo">
+      <img src="./img/logo.svg">
+    </div>
+  </div>
+  <div class="menu__right">
+    <div class="menu__social">
+      <a href="" class="menu__social__item">
+        <img src="./img/icons/vk.svg">
+      </a>
+      <a href="" class="menu__social__item">
+        <img src="./img/icons/wa.svg">
+      </a>
+    </div>
+    <div class="menu__phone">
+      <img src="./img/icons/sun_phone.svg">
+      <a href="" class="c-black">8 8617 22 22 77</a>
+    </div>
+  </div>
+</div>
+<!-- Верхнее меню, лого, контакты -->
+
+
+<!-- Аппартаменты -->
+<div class="appartament container">
+  <div class="appartament-title"></div>
+  <div class="appartament-banner">
+    <div class="appartament-banner__photo">
+      <img src="./img/photo4.jpg">
+    </div>
+    <div class="appartament-banner__items">
+      <div class="appartament-banner__item">
+        <div class="appartament-banner__item__wrapper">
+          <img src="./img/photo4.jpg">
+        </div>
+      </div>
+      <div class="appartament-banner__item">
+        <div class="appartament-banner__item__wrapper">
+          <img src="./img/photo4.jpg">
+        </div>
+      </div>
+      <div class="appartament-banner__item">
+        <div class="appartament-banner__item__wrapper">
+          <img src="./img/photo4.jpg">
+        </div>
+      </div>
+      <div class="appartament-banner__item">
+        <div class="appartament-banner__item__wrapper">
+          <img src="./img/photo4.jpg">
+        </div>
+      </div>
+      <div class="appartament-banner__item">
+        <div class="appartament-banner__item__wrapper">
+          <img src="./img/photo4.jpg">
+        </div>
+      </div>
+      <div class="appartament-banner__item">
+        <div class="appartament-banner__item__wrapper">
+          <img src="./img/photo4.jpg">
+        </div>
+      </div>
+      <div class="appartament-banner__item">
+        <div class="appartament-banner__item__wrapper">
+          <img src="./img/photo4.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Скрипт слайдера аппартаментов -->
+<script>
+  $(document).ready(() => {
+    $('.appartament-banner__items').slick({
+      dots: true,
+      autoplay: false,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      // autoplaySpeed: 3000,
+      speed: 500
+    });
+    $('.appartament-banner__items').on('afterChange', (event, slick, currentSlide, nextSlide) => {
+      const itemNode = $('.appartament-banner__item')[currentSlide];
+      console.log($(itemNode).find('img').attr('src'))
+    })
+  });
+</script>
+<!-- / Скрипт аппартаментов -->
+
+<!-- / Аппартаменты -->
+
+
+<!-- Нижнее доплнительное меню -->
+<div class="add-menu in-footer">
+  <div class="container bg-blue">
+    <div class="add-menu__left">
+      <div class="add-menu__menu">
+        <a href="" class="add-menu__menu__item">
+          <img src="./img/icons/home_top_add_menu.svg">
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          О нас
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Беседки
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Спа
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Контакты
+        </a>
+      </div>
+    </div>
+    <div class="add-menu__right">
+      <div class="add-menu__right__locale">
+        <a href="" class="add-menu__right__locale__item"><img src="./img/icons/flag_en.png"></a>
+        <a href="" class="add-menu__right__locale__item selected"><img src="./img/icons/flag_ru.png"></a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- / Нижнее доплнительное меню -->
+
+<!-- Нижнее меню, лого, контакты -->
+<div class="menu container in-footer">
+  <div class="menu__left">
+    <div class="menu__menu">
+      <a href="" class="menu__menu__item c-black bg-light">
+        Номера
+      </a>
+      <a href="" class="menu__menu__item c-black bg-light">
+        Галерея
+      </a>
+      <a href="" class="menu__menu__item c-black bg-light">
+        Отзывы
+      </a>
+      <a href="" class="menu__menu__item c-black special">
+        Спецпредложения
+      </a>
+    </div>
+  </div>
+  <div class="menu__center">
+    <div class="menu__center__logo-shine">
+      <img src="./img/logo_shine.svg">
+    </div>
+    <div class="menu__center__logo">
+      <img src="./img/logo.svg">
+    </div>
+  </div>
+  <div class="menu__right">
+    <div class="menu__social">
+      <a href="" class="menu__social__item">
+        <img src="./img/icons/vk.svg">
+      </a>
+      <a href="" class="menu__social__item">
+        <img src="./img/icons/wa.svg">
+      </a>
+    </div>
+    <div class="menu__phone">
+      <img src="./img/icons/sun_phone.svg">
+      <a href="" class="c-black">8 8617 22 22 77</a>
+    </div>
+  </div>
+  <div class="menu__address">
+    г. Новороссийск, ул. Рыбацкая, 7
+  </div>
+</div>
+<!-- Нижнее меню, лого, контакты -->
+
+<!-- Футер -->
+<div class="footer">
+  <div class="footer__bg">
+    <img src="./img/footer_bg.png">
+  </div>
+</div>
+
+</body>
+</html>
+<!-- / Футер -->
