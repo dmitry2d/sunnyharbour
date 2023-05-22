@@ -1,43 +1,425 @@
-
-<!-- Хидер -->
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Солнечная гавань</title>
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- /Стили -->
+
+    <!-- Шрифты гугл -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- /Шрифты гугл -->
+    
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <!-- /jQuery -->
+    
+    <!-- Слайдер -->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css"/>
+    <script src="vendor/slick/slick.min.js"></script>
+    <!-- /Слайдер -->
+
 </head>
 <body>
-<!-- / Хидер -->
-    
+  
 
 <!-- Верхнее доплнительное меню -->
-<div class="top-add-menu"></div>
+<div class="add-menu">
+  <div class="container bg-blue">
+    <div class="add-menu__left">
+      <div class="add-menu__menu">
+        <a href="" class="add-menu__menu__item">
+          <img src="./img/icons/home_top_add_menu.svg">
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          О нас
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Беседки
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Спа
+        </a>
+        <a href="" class="add-menu__menu__item c-white">
+          Контакты
+        </a>
+      </div>
+    </div>
+    <div class="add-menu__right">
+      <div class="add-menu__right__locale">
+        <a href="" class="add-menu__right__locale__item"><img src="./img/icons/flag_en.png"></a>
+        <a href="" class="add-menu__right__locale__item selected"><img src="./img/icons/flag_ru.png"></a>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- / Верхнее доплнительное меню -->
 
 <!-- Верхнее меню, лого, контакты -->
-<div class="top-menu"></div>
+<div class="menu container">
+  <div class="menu__left">
+    <div class="menu__menu">
+      <a href="" class="menu__menu__item c-black bg-light">
+        Номера
+      </a>
+      <a href="" class="menu__menu__item c-black bg-light">
+        Галерея
+      </a>
+      <a href="" class="menu__menu__item c-black bg-light">
+        Отзывы
+      </a>
+      <a href="" class="menu__menu__item c-black special">
+        Спецпредложения
+      </a>
+    </div>
+  </div>
+  <div class="menu__center">
+    <div class="menu__center__logo-shine">
+      <img src="./img/logo_shine.svg">
+    </div>
+    <div class="menu__center__logo">
+      <img src="./img/logo.svg">
+    </div>
+  </div>
+  <div class="menu__right">
+    <div class="menu__social">
+      <a href="" class="menu__social__item">
+        <img src="./img/icons/vk.svg">
+      </a>
+      <a href="" class="menu__social__item">
+        <img src="./img/icons/wa.svg">
+      </a>
+    </div>
+    <div class="menu__phone">
+      <img src="./img/icons/sun_phone.svg">
+      <a href="" class="c-black">8 8617 22 22 77</a>
+    </div>
+  </div>
+</div>
 <!-- Верхнее меню, лого, контакты -->
 
 <!-- Верхний баннер -->
-<div class="top-banner">
+<div class="banner container">
+  <div class="banner__items__wrapper">
+    <div class="banner__items">
+      <div class="banner__item">
+        <div class="banner__item__image">
+          <img src="./img/photo1.jpg">
+        </div>
+        <div class="banner__item__title c-white">
+          Повышение<br>
+          категории номера<br>
+          в подарок<br>
+          <div class="divider bg-orange"></div>
+          <span>
+            При бронировании на сайте или по телефону
+          </span>
+        </div>
+      </div>
+      <div class="banner__item">
+        <div class="banner__item__image">
+          <img src="./img/photo1.jpg">
+        </div>
+        <div class="banner__item__title c-white">
+          Повышение<br>
+          категории номера<br>
+          в подарок<br>
+          <div class="divider bg-orange"></div>
+          <span>
+            При бронировании на сайте или по телефону
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Бронирование -->
-    <div class="booking vertical"></div>
+    <div class="booking banner">
+      <form action="">
+        <div class="booking__input">
+          <div class="booking__input__label">
+            Заезд
+          </div>
+          <div class="booking__input__input">
+            <input type="text" value="01.10.2077">
+          </div>
+          <div class="booking__input__icon">
+            <img src="./img/icons/calendar_red.svg" alt="">
+          </div>
+        </div>
+        <div class="booking__input">
+          <div class="booking__input__label">
+            Выезд
+          </div>
+          <div class="booking__input__input">
+            <input type="text" value="01.10.2077">
+          </div>
+          <div class="booking__input__icon">
+            <img src="./img/icons/calendar_red.svg" alt="">
+          </div>
+        </div>
+        <div class="booking__input">
+          <div class="booking__input__label">
+            Гости
+          </div>
+          <div class="booking__input__input">
+            <input type="text" value="7">
+          </div>
+          <div class="booking__input__icon">
+            <img src="./img/icons/man_blue.svg" alt="">
+          </div>
+        </div>
+        <div class="booking__input promo">
+          <div class="booking__input__label">
+            Промокод
+          </div>
+          <div class="booking__input__input">
+            <input type="text" value="jhvbcs767sd6c">
+          </div>
+          <div class="booking__input__icon">
+            <img src="./img/icons/key_red.svg" alt="">
+          </div>
+        </div>
+        <div class="booking__input">
+          <div class="booking__input__input">
+            <input type="submit" value="Найти номера">
+          </div>
+        </div>
+      </form>
+    </div>
   <!-- / Бронирование -->
 </div>
 <!-- / Верхний баннер -->
 
 <!-- Специальное предложение -->
-<div class="special-offer"></div>
+<div class="special-offer container">
+  <div class="h1 c-black">Специальные предложения
+    <div class="divider bg-orange"></div>
+  </div>
+  <div class="special-offer__items">
+    <div class="special-offer__item">
+      <div class="special-offer__item__title">
+        Скидка на аренду беседки - 10%
+      </div>
+      <div class="special-offer__item__photo">
+        <img src="./img/photo2.jpg">
+      </div>
+      <div class="special-offer__item__description">
+        Всем гостям, бронирующим на сайте отеля или по телефону
+      </div>
+      <div class="special-offer__item__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/heart_grey.svg">
+      </div>
+    </div>
+    <div class="special-offer__item">
+      <div class="special-offer__item__title">
+        Скидка на аренду беседки - 10%
+      </div>
+      <div class="special-offer__item__photo">
+        <img src="./img/photo2.jpg">
+      </div>
+      <div class="special-offer__item__description">
+        Всем гостям, бронирующим на сайте отеля или по телефону
+      </div>
+      <div class="special-offer__item__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/heart_grey.svg">
+      </div>
+    </div>
+    <div class="special-offer__item">
+      <div class="special-offer__item__title">
+        Скидка на аренду беседки - 10%
+      </div>
+      <div class="special-offer__item__photo">
+        <img src="./img/photo2.jpg">
+      </div>
+      <div class="special-offer__item__description">
+        Всем гостям, бронирующим на сайте отеля или по телефону
+      </div>
+      <div class="special-offer__item__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/heart_grey.svg">
+      </div>
+    </div>
+    <div class="special-offer__item">
+      <div class="special-offer__item__title">
+        Скидка на аренду беседки - 10%
+      </div>
+      <div class="special-offer__item__photo">
+        <img src="./img/photo2.jpg">
+      </div>
+      <div class="special-offer__item__description">
+        Всем гостям, бронирующим на сайте отеля или по телефону
+      </div>
+      <div class="special-offer__item__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/heart_grey.svg">
+      </div>
+    </div>
+  </div>
+</div>
 <!-- / Специальное предложение -->
 
-<!-- Бронирование -->
-<div class="booking"></div>
+ <!-- Бронирование -->
+ <div class="booking horizontal container">
+    <div class="h1 c-black">
+      Специальные предложения
+    </div>
+    <div class="divider bg-blue"></div>
+    <form action="">
+      <div class="booking__background">
+        <img src="./img/photo_booking.jpg">
+      </div>
+      <div class="booking__input">
+        <div class="booking__input__label">
+          Заезд
+        </div>
+        <div class="booking__input__input">
+          <input type="text" value="01.10.2077">
+        </div>
+        <div class="booking__input__icon">
+          <img src="./img/icons/calendar_red.svg" alt="">
+        </div>
+      </div>
+      <div class="booking__input">
+        <div class="booking__input__label">
+          Выезд
+        </div>
+        <div class="booking__input__input">
+          <input type="text" value="01.10.2077">
+        </div>
+        <div class="booking__input__icon">
+          <img src="./img/icons/calendar_red.svg" alt="">
+        </div>
+      </div>
+      <div class="booking__input">
+        <div class="booking__input__label">
+          Гости
+        </div>
+        <div class="booking__input__input">
+          <input type="text" value="7">
+        </div>
+        <div class="booking__input__icon">
+          <img src="./img/icons/man_blue.svg" alt="">
+        </div>
+      </div>
+      <div class="booking__input promo">
+        <div class="booking__input__label">
+          Промокод
+        </div>
+        <div class="booking__input__input">
+          <input type="text" value="jhvbcs767sd6c">
+        </div>
+        <div class="booking__input__icon">
+          <img src="./img/icons/key_red.svg" alt="">
+        </div>
+      </div>
+      <div class="booking__input">
+        <div class="booking__input__input">
+          <input type="submit" value="Найти номера">
+        </div>
+      </div>
+    </form>
+</div>
 <!-- / Бронирование -->
 
 <!-- Слайдер категорий -->
-<div class="category-slider"></div>
+<div class="category-slider">
+  <div class="container">
+    <div class="h1 c-black">Категории номеров</div>
+    <div class="divider bg-orange"></div>
+    <div class="category-slider__items">
+      <div class="category-slider__item">
+        <div class="category-slider__photo">
+          <img src="./img/photo2.jpg">
+        </div>
+        <div class="category-slider__numbers bg-blue c-white">4 номера</div>
+        <div class="category-slider__title bg-light">Люкс</div>
+        <div class="category-slider__description">Все номера категории оборудованы дополнительными спальными местами, вызывающими восторг у детей и любопытство взрослых.</div>
+        <div class="category-slider__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/tele_grey.svg">
+          <img src="./img/icons/heart_grey.svg">
+        </div>
+      </div>
+      <div class="category-slider__item">
+        <div class="category-slider__photo">
+          <img src="./img/photo2.jpg">
+        </div>
+        <div class="category-slider__numbers bg-blue c-white">4 номера</div>
+        <div class="category-slider__title bg-light">Люкс</div>
+        <div class="category-slider__description">Все номера категории оборудованы дополнительными спальными местами, вызывающими восторг у детей и любопытство взрослых.</div>
+        <div class="category-slider__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/tele_grey.svg">
+          <img src="./img/icons/heart_grey.svg">
+        </div>
+      </div>
+      <div class="category-slider__item">
+        <div class="category-slider__photo">
+          <img src="./img/photo2.jpg">
+        </div>
+        <div class="category-slider__numbers bg-blue c-white">4 номера</div>
+        <div class="category-slider__title bg-light">Люкс</div>
+        <div class="category-slider__description">Все номера категории оборудованы дополнительными спальными местами, вызывающими восторг у детей и любопытство взрослых.</div>
+        <div class="category-slider__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/tele_grey.svg">
+          <img src="./img/icons/heart_grey.svg">
+        </div>
+      </div>
+      <div class="category-slider__item">
+        <div class="category-slider__photo">
+          <img src="./img/photo2.jpg">
+        </div>
+        <div class="category-slider__numbers bg-blue c-white">4 номера</div>
+        <div class="category-slider__title bg-light">Люкс</div>
+        <div class="category-slider__description">Все номера категории оборудованы дополнительными спальными местами, вызывающими восторг у детей и любопытство взрослых.</div>
+        <div class="category-slider__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/tele_grey.svg">
+          <img src="./img/icons/heart_grey.svg">
+        </div>
+      </div>
+      <div class="category-slider__item">
+        <div class="category-slider__photo">
+          <img src="./img/photo2.jpg">
+        </div>
+        <div class="category-slider__numbers bg-blue c-white">4 номера</div>
+        <div class="category-slider__title bg-light">Люкс</div>
+        <div class="category-slider__description">Все номера категории оборудованы дополнительными спальными местами, вызывающими восторг у детей и любопытство взрослых.</div>
+        <div class="category-slider__icons">
+          <img src="./img/icons/percent_red.svg">
+          <img src="./img/icons/tele_grey.svg">
+          <img src="./img/icons/heart_grey.svg">
+        </div>
+      </div>
+    </div>
+    <div class="category-slider__grid">
+      <div class="category-slider__grid__left">
+        <div class="category-slider__controls">
+          <div class="category-slider__controls__left">
+            <img src="./img/arrow_black.svg">
+          </div>
+          <div class="category-slider__controls__dots"></div>
+          <div class="category-slider__controls__right">
+            <img src="./img/arrow_black.svg">
+          </div>
+        </div>
+      </div>
+      <div class="category-slider__grid__right">
+        <a href="" class="category-slider__more bg-blue c-white">Все категории</a>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- Слайдер категорий -->
 
 <!-- Достопримечательности -->
@@ -53,12 +435,48 @@
 <!-- / Преимущества -->
 
 <!-- Нижнее доплнительное меню -->
-<div class="bottom-add-menu"></div>
+<div class="add-menu"></div>
 <!-- / Нижнее доплнительное меню -->
 
 <!-- Нижнее меню, лого, контакты -->
-<div class="bottom-menu"></div>
+<div class="menu"></div>
 <!-- Нижнее меню, лого, контакты -->
+
+<!-- Скрипты для главной -->
+<script>
+      $(document).ready(function(){
+
+        // Слайдер фото на баннере
+        $('.banner__items').slick({
+          dots: true,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          speed: 1000
+        });
+        
+        
+        // Слайдер категорий
+        $('.category-slider__items').slick({
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          autoplay: true,
+          autoplaySpeed: 3000,
+          dots: true,
+          appendDots: $('.category-slider__controls__dots')
+        });
+        $('.category-slider__controls__left').on('click', e => {
+          $('.category-slider__items').slick('slickPrev');
+        });
+        $('.category-slider__controls__right').on('click', e => {
+          $('.category-slider__items').slick('slickNext');
+        });
+
+
+      });
+
+</script>
+<!-- /Скрипты для главной -->
+
 
 <!-- Футер -->
 </body>

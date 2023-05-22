@@ -1,0 +1,80 @@
+
+.booking {
+    border: 2rem dotted rgba(var(--c-white),0.7);
+    padding: 25rem 30rem;
+    border-radius: 50rem;
+}
+.booking__input {
+    margin: 10rem 0;
+}
+.booking__input__label {
+    color: rgb(var(--c-white));
+    font-size: 13rem;
+    font-weight: 400;
+}
+.booking__input__input {
+    margin: 3rem 0;
+}
+.booking__input__input input {
+    background: rgb(var(--c-white));
+    padding: 8rem 12rem;
+    color: rgb(var(--c-black));
+    font-size: 11rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    width: 250rem;
+    border-radius: 5rem;
+    border: 2px solid transparent;
+}
+.booking__input.promo input {
+    border: 2px solid rgb(var(--c-white));
+    color: rgb(var(--c-white));
+    background: transparent;
+}
+.booking__input__icon {
+    position: absolute;
+    bottom: 0rem;
+    right: 5rem;
+}
+.booking__input__input input[type="submit"] {
+    background: rgb(var(--c-blue));
+    color: rgb(var(--c-white));
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.booking.horizontal {
+    border: none;
+    padding: 0 10rem;
+}
+.booking__background {
+    position: absolute;
+    inset: 0;
+}
+.booking__background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.booking.horizontal > form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 20rem 0;
+    border-radius: 10rem;
+    padding: 15rem;
+    overflow: hidden;
+}
+.booking.horizontal .booking__input {
+    margin: 0 10rem;
+    flex-grow: 1;
+}
+.booking.horizontal .booking__input input {
+    width: 100%;
+}
+.booking.horizontal .booking__input__icon {
+    bottom: 2rem;
+}
