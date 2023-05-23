@@ -1,23 +1,191 @@
 
+.appartament {
+    z-index: 0;
+}
 
+.appartament-title {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    background: rgba(0,0,0,0.44);
+    z-index: 2;
+    padding: 20rem 40rem 40rem;
+    border-radius: 0 0 40rem 40rem;
+    text-align: center;
+}
+.appartament-title__description {
+    font-weight: 400;
+    margin-top: 20rem;
+}
+.appartament-title__book {
+    display: inline-block;
+    background-image: url('../img/icons/key_white.svg');
+    background-position: 20rem center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 100rem;
+    padding: 10rem 30rem 10rem 50rem;
+    font-size: 16rem;
+    font-weight: 500;
+    margin: 30rem 0 10rem;
+    box-shadow: 0px 10px 24px rgba(var(--c-orange),0.42);
+}
 .appartament-banner {
 
 }
 
 .appartament-banner__photo {
+    width: 100%;
+    height: 0;
+    padding-bottom: 45%;
+}
+.appartament-banner__photo img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 40rem;
+    object-fit: cover;
+}
+.appartament-banner__slider {
+    display: flex;
+    position: absolute;
+    bottom: 80rem;
+    left: 10%;
+    width: calc(80%);
+}
+.appartament-banner__prev {
+    position: absolute;
+    left: -6%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+.appartament-banner__next {
+    position: absolute;
+    right: -6%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
 }
 .appartament-banner__items {
+    width: 100%;
     display: flex;
+
 }
 .appartament-banner__item {
-    width: 100rem;
+    padding: 10rem;
 }
 .appartament-banner__item__wrapper {
     height: 0;
-    padding-bottom: 50%;
+    padding-bottom: 60%;
 }
 .appartament-banner__item img {
     position: absolute;
     width: 100%;
     height: 100%;
+    border: 4rem solid transparent;
+    border-radius: 10rem;
+    object-fit: cover;
+}
+.appartament-banner__item.slick-current img {
+    border: 4rem solid rgb(var(--c-white));
+}
+
+.appartament-banner__items ul.slick-dots {
+    list-style-type: none;
+    position: absolute;
+    bottom: -60rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+}
+.appartament-banner__items ul.slick-dots li {
+    display: flex;
+    align-items: center;
+}
+.appartament-banner__items ul.slick-dots li button {
+    font-size: 0;
+    width: 12rem;
+    height: 12rem;
+    background-color: rgb(var(--c-orange));
+    background-image: none;
+    background-size: cover;
+    margin: 8rem;
+    border-radius: 20rem;
+    cursor: pointer;
+    transition: background-color 0.4s ease-out;
+}
+.appartament-banner__items ul.slick-dots li.slick-active button {
+    width: 34rem;
+    height: 34rem;
+    background-color: transparent;
+    background-image: url('../img/logo_allwhite.svg');
+}
+
+
+.appartament-about {
+    margin: 70rem 0;
+}
+.appartament-about__text {
+    text-align: center;
+    font-size: 16rem;
+    font-weight: 500;
+    margin-top: 30rem;
+}
+
+.appartament-features {
+    margin: 70rem 0;
+}
+.appartament-features__items {
+    margin: 30rem -10rem 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+.appartament-features__item {
+    min-width: calc((100% - 80rem) / 4);
+    max-width: calc((100% - 80rem) / 4);
+    flex-grow: 1;
+    margin: 10rem;
+    border-radius: 20rem;
+    padding: 25rem;
+    box-shadow: 0 10rem 60rem 20rem rgba(var(--c-black),0.1);
+    background: rgb(var(--c-white));
+}
+.appartament-features__item__header {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+}
+.appartament-features__item__text {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.appartament-features__list {
+    border-radius: 20rem;
+    padding: 40rem;
+    box-shadow: 0 10rem 60rem 20rem rgba(var(--c-black),0.1);
+    background: rgb(var(--c-white));
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.appartament-features__list__item {
+    min-width: calc((100% - 80rem) / 4);
+    max-width: calc((100% - 80rem) / 4);
+    flex-grow: 1;
+    margin: 10rem;
+    font-size: 16rem;
+    font-weight: 500;
+    padding-left: 30rem;
+    background: url('../img/list_icon_red.svg') no-repeat left center;
 }

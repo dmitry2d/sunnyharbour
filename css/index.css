@@ -17,3 +17,22 @@
 @import 'timing.css';
 @import 'categories.css';
 @import 'appartament.css';
+@import 'information.css';
+
+
+
+@media screen and (max-width:800px) {
+
+    .menu,
+    .banner,
+    .booking,
+    .special-offer,
+    .category-slider,
+    .attractions,
+    .video-review,
+    .advantages,
+    .footer {
+        display: none;
+    }
+    
+}
