@@ -13,7 +13,6 @@
     margin-top: 150rem;
 }
 
-
 .add-menu__menu {  
     display: flex;  
     align-items: center;
@@ -55,3 +54,17 @@
     border-radius: 50rem;
     border: 2rem solid rgb(var(--c-white));
 }
+
+.add-menu__hamburger:hover:after {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    
+.add-menu .container {
+    padding: 10rem 50rem;
+}
+
+}
+
+

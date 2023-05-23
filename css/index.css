@@ -19,11 +19,12 @@
 @import 'appartament.css';
 @import 'information.css';
 
+@import 'mobile-menu.css';
 
 
 @media screen and (max-width:800px) {
 
-    .menu,
+    /* .menu, */
     .banner,
     .booking,
     .special-offer,

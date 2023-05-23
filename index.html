@@ -33,24 +33,27 @@
 <body>
   
 
-<!-- Верхнее доплнительное меню -->
+<!-- Верхнее дополнительное меню -->
 <div class="add-menu">
   <div class="container bg-blue">
     <div class="add-menu__left">
       <div class="add-menu__menu">
-        <a href="" class="add-menu__menu__item">
+        <a href="" class="add-menu__menu__item desktop">
           <img src="./img/icons/home_top_add_menu.svg">
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item mobile add-menu__hamburger">
+          <img src="./img/icons/hamburger_top_add_menu.svg">
+        </a>
+        <a href="" class="add-menu__menu__item c-white desktop">
           О нас
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Беседки
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Спа
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Контакты
         </a>
       </div>
@@ -67,7 +70,7 @@
 
 <!-- Верхнее меню, лого, контакты -->
 <div class="menu container">
-  <div class="menu__left">
+  <div class="menu__left desktop">
     <div class="menu__menu">
       <a href="" class="menu__menu__item c-black bg-light">
         Номера
@@ -610,19 +613,22 @@
   <div class="container bg-blue">
     <div class="add-menu__left">
       <div class="add-menu__menu">
-        <a href="" class="add-menu__menu__item">
+        <a href="" class="add-menu__menu__item desktop">
           <img src="./img/icons/home_top_add_menu.svg">
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item mobile add-menu__hamburger">
+          <img src="./img/icons/hamburger_top_add_menu.svg">
+        </a>
+        <a href="" class="add-menu__menu__item c-white desktop">
           О нас
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Беседки
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Спа
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Контакты
         </a>
       </div>
@@ -689,6 +695,76 @@
     <img src="./img/footer_bg.png">
   </div>
 </div>
+
+
+<!-- Мобильное меню -->
+<div class="mobile-menu mobile">
+  <div class="mobile-menu__close">
+    <img src="./img/mobile_menu_close.svg">
+  </div>
+  <div class="mobile-menu__logo">
+    <img src="./img/logo.svg">
+  </div>
+  <div class="mobile-menu__title">
+    Гостиница<br>Солнечная Гавань
+  </div>
+  <div class="mobile-menu__add">
+    <a href="">
+      О нас
+    </a>
+    <a href="">
+      Беседки
+    </a>
+    <a href="">
+      Спа
+    </a>
+    <a href="">
+      Контакты
+    </a>
+  </div>
+  <div class="mobile-menu__main">
+    <a href="">
+      Номера
+    </a>
+    <a href="">
+      Галерея
+    </a>
+    <a href="">
+      Отзывы
+    </a>
+    <a href="" class="special">
+      Спецпредложения
+    </a>
+  </div>
+  <div class="mobile-menu__contacts">
+    <div class="mobile-menu__social">
+      <a href="" class="mobile-menu__social__item">
+        <img src="./img/icons/vk.svg">
+      </a>
+      <a href="" class="mobile-menu__social__item">
+        <img src="./img/icons/wa.svg">
+      </a>
+    </div>
+    <div class="mobile-menu__phone">
+      <img src="./img/icons/sun_phone.svg">
+      <a href="" class="c-black">8 8617 22 22 77</a>
+    </div>
+  </div>
+
+</div>
+<script>
+  $('.add-menu__hamburger').on('touchend mouseup click', e => {
+    e.stopPropagation();
+    e.preventDefault();
+    $('.mobile-menu').addClass('open');
+  })
+  $('.mobile-menu__close').on('click', e => {
+    $('.mobile-menu').removeClass('open');
+  });
+</script>
+<!-- / Мобильное меню -->
+
+
 
 </body>
 </html>

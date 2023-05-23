@@ -60,3 +60,16 @@ body.inside {
     font-weight: 500;
     margin-bottom: 10rem;
 }
+
+*.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 800px) {
+    .desktop {
+        display: none!important;
+    }
+    *.mobile {
+        display: revert;
+    }
+}

@@ -127,3 +127,18 @@
         transform: rotate(360deg)
     }
 }
+
+@media screen and (max-width: 800px) {
+    .menu__center {
+        margin-left: 60rem;
+    }
+    .menu__center__logo {
+        padding: 10rem;
+    }
+    .menu__center__logo img {
+        width: 60rem;
+    }
+    .menu__center__logo-shine img {
+        width: 300rem;
+    }
+}
