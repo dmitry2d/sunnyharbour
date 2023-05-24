@@ -10,7 +10,7 @@
     background: white;
     z-index: 1000;
     transition: left 0.4s;
-    padding: 20rem;
+    padding: 60rem;
 }
 .mobile-menu.open {
     left: 0;
@@ -20,7 +20,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    padding: 20rem;
+    padding: 30px;
     cursor: pointer;
     z-index: 10;
 }
@@ -39,7 +39,7 @@
 
 
 .mobile-menu__title {
-    font-size: 22rem;
+    font-size: 28rem;
     font-weight: 500;
     margin: 20rem 0 30rem;
     color: rgb(var(--c-blue));
@@ -52,7 +52,7 @@
 }
 .mobile-menu__add a {
     display: block;
-    font-size: 18rem;
+    font-size: 25rem;
     font-weight: 500;
     padding: 5rem 0;
 }
@@ -61,6 +61,7 @@
     display: flex;
     flex-direction: column;
     width: fit-content;
+    margin: 40rem 0 60rem;
 }
 .mobile-menu__main a {
     padding: 10rem 30rem 10rem 20rem;

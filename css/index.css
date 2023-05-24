@@ -25,8 +25,9 @@
 @media screen and (max-width:800px) {
 
     /* .menu, */
-    .banner,
-    .booking,
+    /* .banner, */
+    /* .booking, */
+    .booking.horizontal,
     .special-offer,
     .category-slider,
     .attractions,

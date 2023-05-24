@@ -1,5 +1,4 @@
 
-
 .add-menu .container {
     display: flex;
     align-items: center;
@@ -55,9 +54,24 @@
 }
 
 @media screen and (max-width: 800px) {
-    
-    .add-menu .container {
-        padding: 10rem 50rem;
+    .add-menu {
+        padding: 0 10px;
     }
-
+    .add-menu .container {
+        padding: 10px 30px;
+        border-radius: 0 0 50rem 50rem;
+    }
+    .add-menu__hamburger {
+        background: rgb(var(--c-blue));
+        z-index: 100;
+    }
+    .add-menu__hamburger img {
+        width: 33px;
+    }
+    .add-menu__right__locale__item img {
+        width: 30px;
+    }
+    .add-menu__right__locale__item.selected img {
+        border-width: 3px;
+    }
 }

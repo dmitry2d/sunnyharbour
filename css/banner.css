@@ -45,7 +45,8 @@
     font-size: 38rem;
     font-weight: 600;
     line-height: 0.9;
-    
+    color: rgb(var(--c-white));
+    text-decoration: none;
 }
 .banner__item .divider {
     margin: 15rem 0;
@@ -53,6 +54,7 @@
 .banner__item__title span {
     display: block;
     margin-top: 50rem;
+    color: rgb(var(--c-white));
 }
 
 /* slick */
@@ -100,5 +102,25 @@
     z-index: 2;
     right: 0;
     top: 50%;
-    transform: translate(-50rem, -50%)
+    transform: translate(-50rem, -50%);
+    border-radius: 50rem;
 }
+
+@media screen and (max-width:800px) {
+    .banner {
+        margin-top: -5px;
+    }
+    .banner__item {
+        padding: 50px;
+        padding-bottom: 300px;
+    }
+    .banner .booking {
+        position: relative;
+        z-index: 2;
+        left: 0;
+        right: 0;
+        bottom: 60px;
+        transform: translateY(-100%);
+    }   
+}
+

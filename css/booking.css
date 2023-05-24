@@ -3,6 +3,7 @@
     border: 2rem dotted rgba(var(--c-white),0.7);
     padding: 25rem 30rem;
 }
+
 .booking__input {
     margin: 10rem 0;
 }
@@ -83,4 +84,33 @@
 }
 .booking.horizontal .booking__input__icon {
     bottom: 2rem;
+}
+
+@media screen and (max-width:800px) {
+    .booking {
+        border: none;
+    }
+    .booking form {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .booking__input {
+        flex-grow: 1;
+        width: calc(50% - 40px);
+        margin: 0 5px;
+    }
+    .booking__input__label {
+        font-size: 11px;
+    }
+    .booking__input__input {
+        margin: 5px 0;
+    }
+    .booking__input__input input {
+        font-size: 13px;
+        width: 100%;
+    }
+    .booking__input__icon {
+        bottom: 5px;
+    }
 }
