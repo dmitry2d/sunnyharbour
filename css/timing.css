@@ -1,6 +1,6 @@
 
 .timing {
-    margin: 70px 0;
+    margin: 70rem 0;
 }
 .timing__items {
     display: flex;
@@ -13,7 +13,7 @@
     width: 50%;
     overflow: hidden;
     box-shadow: 0 10rem 60rem 20rem rgba(var(--c-black),0.1);
-    background: rgb(var(--c-white)) url('../img/timing_bg.svg') no-repeat -20rem top;
+    background: rgb(var(--c-white)) url('../img/timing_bg.svg') no-repeat -50px top;
     background-size: auto 100%;
 
 }
@@ -37,4 +37,33 @@
 .timing__time__text {
     font-size: 40rem;
     margin-left: 10rem;
+}
+
+@media screen and (max-width:800px) {
+        
+    .timing {
+        margin: 40px 0;
+    }
+    .timing__items {
+        flex-wrap: wrap;
+    }
+    .timing__item {
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 20px;
+    }
+    .timing__item__left {
+        margin-right: 15px; 
+        width: 130px;  
+    }
+    .timing__item__right {
+        flex-grow: 1;
+        margin-left: 20px;
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .timing__time__text {
+        font-size: 30px;
+        margin-left: 0;
+    }
 }

@@ -32,24 +32,27 @@
 </head>
 <body class="inside">
   
-<!-- Верхнее доплнительное меню -->
+<!-- Верхнее дополнительное меню -->
 <div class="add-menu">
   <div class="container bg-blue">
     <div class="add-menu__left">
       <div class="add-menu__menu">
-        <a href="" class="add-menu__menu__item">
+        <a href="" class="add-menu__menu__item desktop">
           <img src="./img/icons/home_top_add_menu.svg">
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item mobile add-menu__hamburger">
+          <img src="./img/icons/hamburger_top_add_menu.svg">
+        </a>
+        <a href="" class="add-menu__menu__item c-white desktop">
           О нас
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Беседки
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Спа
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Контакты
         </a>
       </div>
@@ -66,7 +69,7 @@
 
 <!-- Верхнее меню, лого, контакты -->
 <div class="menu container">
-  <div class="menu__left">
+  <div class="menu__left desktop">
     <div class="menu__menu">
       <a href="" class="menu__menu__item c-black bg-light">
         Номера
@@ -106,7 +109,6 @@
   </div>
 </div>
 <!-- Верхнее меню, лого, контакты -->
-
 
 <!-- Аппартаменты -->
 <div class="appartament container">
@@ -237,7 +239,16 @@
       prevArrow: '.appartament-banner__prev',
       nextArrow: '.appartament-banner__next',
       // autoplaySpeed: 3000,
-      speed: 500
+      speed: 500,
+      responsive: [
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1
+              }
+            }
+          ]
     });
     $('.appartament-banner__items').on('afterChange', (event, slick, currentSlide, nextSlide) => {
       const itemNode = $('.appartament-banner__item')[currentSlide - 1];
@@ -368,8 +379,8 @@
 <!-- Слайдер категорий -->
 <div class="category-slider">
   <div class="container">
-    <div class="h1 c-black">Другие номера</div>
-    <div class="divider bg-blue"></div>
+    <div class="h1 c-black">Категории номеров</div>
+    <div class="divider bg-orange"></div>
     <div class="category-slider__items">
       <div class="category-slider__item">
         <div class="category-slider__photo">
@@ -468,7 +479,16 @@
           dots: true,
           prevArrow: false,
           nextArrow: false,
-          appendDots: $('.category-slider__controls__dots')
+          appendDots: $('.category-slider__controls__dots'),
+          responsive: [
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
         });
         // Листание левая кнопка
         $('.category-slider__controls__left').on('click', e => {
@@ -556,19 +576,22 @@
   <div class="container bg-blue">
     <div class="add-menu__left">
       <div class="add-menu__menu">
-        <a href="" class="add-menu__menu__item">
+        <a href="" class="add-menu__menu__item desktop">
           <img src="./img/icons/home_top_add_menu.svg">
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item mobile add-menu__hamburger">
+          <img src="./img/icons/hamburger_top_add_menu.svg">
+        </a>
+        <a href="" class="add-menu__menu__item c-white desktop">
           О нас
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Беседки
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Спа
         </a>
-        <a href="" class="add-menu__menu__item c-white">
+        <a href="" class="add-menu__menu__item c-white desktop">
           Контакты
         </a>
       </div>
@@ -636,6 +659,73 @@
   </div>
 </div>
 
+
+<!-- Мобильное меню -->
+<div class="mobile-menu mobile">
+  <div class="mobile-menu__close">
+    <img src="./img/mobile_menu_close.svg">
+  </div>
+  <div class="mobile-menu__logo">
+    <img src="./img/logo.svg">
+  </div>
+  <div class="mobile-menu__title">
+    Гостиница<br>Солнечная Гавань
+  </div>
+  <div class="mobile-menu__add">
+    <a href="">
+      О нас
+    </a>
+    <a href="">
+      Беседки
+    </a>
+    <a href="">
+      Спа
+    </a>
+    <a href="">
+      Контакты
+    </a>
+  </div>
+  <div class="mobile-menu__main">
+    <a href="">
+      Номера
+    </a>
+    <a href="">
+      Галерея
+    </a>
+    <a href="">
+      Отзывы
+    </a>
+    <a href="" class="special">
+      Спецпредложения
+    </a>
+  </div>
+  <div class="mobile-menu__contacts">
+    <div class="mobile-menu__social">
+      <a href="" class="mobile-menu__social__item">
+        <img src="./img/icons/vk.svg">
+      </a>
+      <a href="" class="mobile-menu__social__item">
+        <img src="./img/icons/wa.svg">
+      </a>
+    </div>
+    <div class="mobile-menu__phone">
+      <img src="./img/icons/sun_phone.svg">
+      <a href="" class="c-black">8 8617 22 22 77</a>
+    </div>
+  </div>
+
+</div>
+<script>
+  $('.add-menu__hamburger').on('touchend mouseup click', e => {
+    e.stopPropagation();
+    e.preventDefault();
+    $('.mobile-menu').addClass('open');
+  })
+  $('.mobile-menu__close').on('click', e => {
+    $('.mobile-menu').removeClass('open');
+  });
+</script>
+<!-- / Мобильное меню -->
 </body>
 </html>
 <!-- / Футер -->

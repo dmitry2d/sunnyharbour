@@ -55,6 +55,7 @@
     display: block;
     margin-top: 50rem;
     color: rgb(var(--c-white));
+    font-size: 15rem;
 }
 
 /* slick */

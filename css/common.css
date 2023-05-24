@@ -2,12 +2,16 @@
 html {
     font-size: var(--initial-font-size);
     overflow-x: hidden;
+    height: 100%;
 }
 
 body {
     overflow-x: hidden;
+    height: 100%;
     background: url('../img/bg1.png') no-repeat top center;
     background-size: 110vw;
+    color: rgb(var(--c-black));
+    font-size: 16rem;
 }
 body.inside {
     background: url('../img/body_bg_inside.png') no-repeat top center;
@@ -22,8 +26,9 @@ body.inside {
     outline: none;
     border: none;
     font-family: 'Montserrat';
-    font-size: 16rem;
     font-weight: 400;
+}
+a {
     color: rgb(var(--c-black));
 }
 
@@ -79,7 +84,7 @@ body.inside {
         letter-spacing: -1px;
     }
     .h1.inside {
-        font-size: 25px;
+        font-size: 30px;
     }
     .h1 span {
         font-size: 16px;

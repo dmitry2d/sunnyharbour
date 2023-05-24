@@ -49,3 +49,10 @@
     margin: 70rem auto 50rem;
     box-shadow: 0px 10px 24px rgba(var(--c-orange),0.42);
 }
+
+@media screen and (max-width: 800px) {
+    .information__item {
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
