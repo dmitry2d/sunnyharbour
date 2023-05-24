@@ -1,6 +1,6 @@
 
 html {
-    font-size: 1px;
+    font-size: var(--initial-font-size);
 }
 
 body {
@@ -21,7 +21,7 @@ body.inside {
     outline: none;
     border: none;
     font-family: 'Montserrat';
-    font-size: 15px;
+    font-size: 16rem;
     font-weight: 400;
     color: rgb(var(--c-black));
 }

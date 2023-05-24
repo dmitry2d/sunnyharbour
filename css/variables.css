@@ -8,6 +8,7 @@
     --c-green: 88,195,70;
     --c-orange: 245,156,55;
     --container-width: 1400px;
+    --initial-font-size: 1px;
 }
 
 .c-white {
@@ -46,4 +47,13 @@
 }
 .bg-orange {
     background-color: rgb(var(--c-orange));
+}
+
+@media screen and (max-width: 800px) {
+
+    :root {
+        --view-coeff: calc(100vw / 800);
+        --initial-font-size: calc((1px - var(--view-coeff)) * 0.4 + var(--view-coeff));
+    }
+    
 }
