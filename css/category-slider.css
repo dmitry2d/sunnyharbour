@@ -38,7 +38,7 @@
 }
 .category-slider__description {
     padding: 30rem 50rem;
-    font-size: 13px;
+    font-size: 13rem;
 }
 .category-slider__icons {
     display: flex;
@@ -126,4 +126,30 @@
     height: 34rem;
     background-color: transparent;
     background-image: url('../img/logo_allblack.svg');
+}
+
+@media screen and (max-width:800px) {
+    .category-slider__grid {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .category-slider__grid__right {
+        margin: 10px 0;
+    }
+    .category-slider__numbers {
+        font-size: 15px;
+    }
+    .category-slider__title {
+        font-size: 22px;
+    }
+    .category-slider__description {
+        font-size: 12px;
+        font-weight: 500;
+    }
+    .category-slider__more {
+        padding: 0 24px;
+        font-size: 14px;
+        font-weight: 500;
+    }
 }

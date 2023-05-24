@@ -18,4 +18,11 @@
 }
 .video-review__video iframe {
     border-radius: 10rem;
+    max-width: 90vw;
+}
+
+@media screen and (max-width:800px) {
+    .video-review {
+        /* overflow: hidden; */
+    }
 }

@@ -1,5 +1,4 @@
 
-
 .special-offer {
     margin: 80rem auto;
 }
@@ -48,4 +47,36 @@
     display: flex;
     justify-content: center;
     margin: 20rem 0;
+}
+
+@media screen and (max-width:800px) {
+    .special-offer {
+        margin: 80px auto 0;
+    }
+    .special-offer__items {
+        margin: 30px 0;
+        flex-wrap: wrap;
+    }
+    .special-offer__item {
+        border-radius: 15px;
+        margin: 0 10px 20px;
+        padding: 20px;
+        min-width: 46%;
+        flex-grow: 1;
+        overflow: hidden;
+    }
+    .special-offer__item__title  {
+        font-size: 18px;
+        margin: 6px 0 5px;
+        height: 3em;
+    }
+    .special-offer__item__description  {
+        font-size: 15px;
+        margin: 20rem 0;
+        opacity: 0.7;
+        margin: 20px 0 10px;
+    }
+    .special-offer__item__photo {
+        padding-bottom: 55%;
+    }
 }

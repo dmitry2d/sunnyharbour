@@ -109,6 +109,7 @@
 @media screen and (max-width:800px) {
     .banner {
         margin-top: -5px;
+        margin-bottom: 120px;
     }
     .banner__item {
         padding: 50px;
@@ -119,8 +120,9 @@
         z-index: 2;
         left: 0;
         right: 0;
-        bottom: 60px;
-        transform: translateY(-100%);
-    }   
+        transform: translate(0,0);
+        margin-top: -250px;
+    }
+
 }
 

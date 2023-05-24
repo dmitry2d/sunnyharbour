@@ -455,7 +455,16 @@
           dots: true,
           prevArrow: false,
           nextArrow: false,
-          appendDots: $('.category-slider__controls__dots')
+          appendDots: $('.category-slider__controls__dots'),
+          responsive: [
+            {
+              breakpoint: 800,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+          ]
         });
         // Листание левая кнопка
         $('.category-slider__controls__left').on('click', e => {

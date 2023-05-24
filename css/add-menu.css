@@ -57,6 +57,9 @@
     .add-menu {
         padding: 0 10px;
     }
+    .add-menu:not(.in-footer) {
+        z-index: 100;
+    }
     .add-menu .container {
         padding: 10px 30px;
         border-radius: 0 0 50rem 50rem;
@@ -74,4 +77,9 @@
     .add-menu__right__locale__item.selected img {
         border-width: 3px;
     }
+    .add-menu.in-footer .container {
+        margin-top: 50px;
+    }
+    
 }
+

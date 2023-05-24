@@ -107,10 +107,13 @@
         margin: 5px 0;
     }
     .booking__input__input input {
-        font-size: 13px;
+        font-size: 14px;
         width: 100%;
     }
     .booking__input__icon {
-        bottom: 5px;
+        bottom: 6px;
+    }
+    .booking.horizontal {
+        margin-top: 35px;
     }
 }
