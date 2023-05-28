@@ -14,6 +14,7 @@
     overflow: hidden;
     box-shadow: 0 10rem 60rem 20rem rgba(var(--c-black),0.1);
     background: rgb(var(--c-white));
+    text-decoration: none;
 }
 .special-offer__item__title  {
     font-size: 18rem;

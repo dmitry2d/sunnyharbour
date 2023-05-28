@@ -19,7 +19,7 @@
     min-height: 400rem;
     display: flex;
     align-items: center;
-    padding: 110rem 147rem 150rem;
+    /* padding: 110rem 147rem 150rem; */
     overflow: hidden;
 }
 .banner__item__image {
@@ -47,6 +47,8 @@
     line-height: 0.9;
     color: rgb(var(--c-white));
     text-decoration: none;
+    padding: 110rem 147rem 150rem;
+    display: block;
 }
 .banner__item .divider {
     margin: 15rem 0;

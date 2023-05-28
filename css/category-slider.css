@@ -18,6 +18,7 @@
     box-shadow: 0 10rem 60rem 20rem rgba(var(--c-black),0.1);
     background: rgb(var(--c-white));
     border-radius: 10rem;
+    text-decoration: none;
 }
 .category-slider__numbers {
     position: absolute;

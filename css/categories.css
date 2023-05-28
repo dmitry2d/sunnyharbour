@@ -26,6 +26,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 10rem;
+    text-decoration: none;
 }
 .categories__legend__item__count {
     display: flex;
